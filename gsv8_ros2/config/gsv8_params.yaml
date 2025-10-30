@@ -1,0 +1,21 @@
+# GSV8 ROS2 Publisher Configuration
+# Copy this file and modify for your setup
+
+gsv8_publisher:
+  ros__parameters:
+    # EtherCAT adapter name
+    # Windows example: '\Device\NPF_{2315E995-CDA9-4A2D-A9B7-6DFB4C64230C}'
+    # Linux example: 'eth0' or 'enp0s31f6'
+    adapter_name: ''  # REQUIRED: Set your adapter name here
+
+    # EtherCAT slave position (0 for first slave)
+    slave_position: 0
+
+    # Publishing rate in Hz
+    publish_rate: 100.0
+
+    # Frame ID for the sensor
+    frame_id: 'ft_sensor'
+
+    # Publish all 8 channels as Float32MultiArray (in addition to WrenchStamped)
+    publish_all_channels: true
