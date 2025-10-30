@@ -1,9 +1,5 @@
 # gsv8-ethercat
 
-[![PyPI version](https://badge.fury.io/py/gsv8-ethercat.svg)](https://badge.fury.io/py/gsv8-ethercat)
-[![Python Version](https://img.shields.io/pypi/pyversions/gsv8-ethercat.svg)](https://pypi.org/project/gsv8-ethercat/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 Python interface for **ME-Messsysteme GSV-8** force/torque sensor amplifier via EtherCAT.
 
 ## Features
@@ -287,15 +283,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Hardware**: [ME-Messsysteme Website](https://www.me-systeme.de)
 - **pysoem**: [pysoem GitHub](https://github.com/bnjmnp/pysoem)
 
-## Changelog
 
-### 1.0.0 (2025-01-XX)
-- Initial release
-- Core sensor interface
-- Diagnostics and calibration tools
-- CLI utilities
-- Comprehensive documentation
-
----
-
-**Made with ❤️ for precision force/torque measurements**
+**Handle with care. Use wisely. Do not drink and drive. Be responsible.**
