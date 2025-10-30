@@ -1,0 +1,9 @@
+include README.md
+include LICENSE
+include pyproject.toml
+include requirements.txt
+recursive-include gsv8_ethercat *.py
+recursive-include examples *.py
+recursive-include docs *.md
+global-exclude __pycache__
+global-exclude *.py[co]

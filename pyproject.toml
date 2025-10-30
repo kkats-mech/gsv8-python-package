@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gsv8-ethercat"
+version = "0.1.0"
+description = "EtherCAT interface for ME-Messsysteme GSV-8 force/torque sensor amplifier"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Konstantinos Katsampiris Salgado", email = "katsampiris.konst@gmail.com"}
+]
+keywords = ["ethercat", "force sensor", "torque sensor", "GSV-8", "ME-Messsysteme"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "pysoem>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=22.0",
+    "pylint>=2.0",
+    "twine>=4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/gsv8-ethercat"
+Documentation = "https://github.com/yourusername/gsv8-ethercat#readme"
+Repository = "https://github.com/yourusername/gsv8-ethercat"
+"Bug Reports" = "https://github.com/yourusername/gsv8-ethercat/issues"
+
+[project.scripts]
+gsv8-diagnostics = "gsv8_ethercat.cli:run_diagnostics_cli"
+gsv8-calibrate = "gsv8_ethercat.cli:run_calibration_cli"
+gsv8-monitor = "gsv8_ethercat.cli:run_monitor_cli"
+
+[tool.setuptools]
+packages = ["gsv8_ethercat"]
+
+[tool.black]
+line-length = 100
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
+
+[tool.pylint.messages_control]
+max-line-length = 100
